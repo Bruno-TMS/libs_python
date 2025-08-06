@@ -32,5 +32,3 @@ class Bhaskara:
 
 if __name__ == '__main__':
     b = Bhaskara()
-
-    print(b.__qualname__)
