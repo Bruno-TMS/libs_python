@@ -1,3 +1,4 @@
+
 import math
 
 
@@ -31,5 +32,5 @@ class Bhaskara:
 
 if __name__ == '__main__':
     b = Bhaskara()
-    b.main()
-    b.main()
+
+    print(b.__qualname__)
