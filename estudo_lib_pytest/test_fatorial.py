@@ -1,5 +1,5 @@
 import pytest
-from .fatorial import fatorial
+from .fatorial import fatorial, FatorialInvalido
 
 
 @pytest.mark.parametrize('entrada, esperado',[
@@ -11,3 +11,12 @@ from .fatorial import fatorial
     ])
 def test_fatorial(entrada, esperado):
     assert fatorial(entrada) == esperado
+
+@pytest.mark.parametrize('entrada',[
+    'w',
+    '8',
+    5.9
+    ])
+def test_fatorial_invalido(entrada):
+    with pytest.raises(FatorialInvalido):
+        fatorial(entrada)
